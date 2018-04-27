@@ -1,0 +1,19 @@
+{
+  "title": "Formation Spring Boot",
+  "author": "Rossi Oddet",
+  "plugins": [
+    "auto-summary",
+    "github-edit"
+  ],
+  "ignores": [
+    "_book",
+    "node_modules",
+    "sources"
+  ],
+  "pluginsConfig": {
+    "github-edit": {
+      "repo": "DevInstitut/formation-spring-boot-1",
+      "branch": "master"
+    }
+  }
+}
