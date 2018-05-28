@@ -13,3 +13,5 @@
 * [Spring CLI](04-cli/README.md)
 * [Scripting Groovy](05-groovy/README.md)
 * [Travaux Pratiques](99-tp/README.md)
+  * [TP Démo Spring Boot](99-tp/01-tp-exemple.md)
+  * [TP Web Api](99-tp/02-tp-consolidation.md)
