@@ -1,6 +1,6 @@
 # Formation Spring Boot
 
-[![Build Status](https://travis-ci.org/DevInstitut/formation-spring-boot-1.svg?branch=master)](https://travis-ci.org/DevInstitut/formation-spring-boot-1)
+[![Build Status](https://travis-ci.org/DevInstitut/formation-spring-boot.svg?branch=master)](https://travis-ci.org/DevInstitut/formation-spring-boot)
 
 * Version en ligne : https://www.dev-institut.fr/formation-spring-boot
 
