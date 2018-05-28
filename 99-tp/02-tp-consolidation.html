@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Scripting Groovy · Formation Spring Boot</title>
+        <title>TP Web Api · Formation Spring Boot</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../99-tp/" />
     
-    
-    <link rel="prev" href="../04-cli/" />
+    <link rel="prev" href="01-tp-exemple.html" />
     
 
     </head>
@@ -289,9 +287,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="./">
+        <li class="chapter " data-level="1.6" data-path="../05-groovy/">
             
-                <a href="./">
+                <a href="../05-groovy/">
             
                     
                     Scripting Groovy
@@ -302,9 +300,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="../99-tp/">
+        <li class="chapter " data-level="1.7" data-path="./">
             
-                <a href="../99-tp/">
+                <a href="./">
             
                     
                     Travaux Pratiques
@@ -316,9 +314,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="../99-tp/01-tp-exemple.html">
+        <li class="chapter " data-level="1.7.1" data-path="01-tp-exemple.html">
             
-                <a href="../99-tp/01-tp-exemple.html">
+                <a href="01-tp-exemple.html">
             
                     
                     TP Démo Spring Boot
@@ -329,9 +327,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="../99-tp/02-tp-consolidation.html">
+        <li class="chapter active" data-level="1.7.2" data-path="02-tp-consolidation.html">
             
-                <a href="../99-tp/02-tp-consolidation.html">
+                <a href="02-tp-consolidation.html">
             
                     
                     TP Web Api
@@ -377,7 +375,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Scripting Groovy</a>
+        <a href=".." >TP Web Api</a>
     </h1>
 </div>
 
@@ -392,20 +390,79 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="scripting-groovy">Scripting Groovy</h1>
-<p>Spring Boot CLI permet d&apos;&#xE9;crire des scripts groovy d&#xE9;marr&#xE9;s en application Web.</p>
-<p>Exemple de Script (fichier exempleApp.groovy) :</p>
-<pre><code class="lang-groovy"><span class="hljs-meta">@RestController</span>
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BonjourController</span> {</span>
-    <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/bonjour&quot;</span>)
-    String bonjour() {
-        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;bonjour depuis Spring Boot&quot;</span>
-    }
-}
-</code></pre>
-<p>D&#xE9;marrer l&apos;application :</p>
-<pre><code>spring run exempleApp.groovy
-</code></pre>
+                                <h1 id="tp-web-api">TP Web Api</h1>
+<h2 id="application-backend-gestion-personnel">Application Backend Gestion Personnel</h2>
+<ul>
+<li>Cr&#xE9;er une application Spring Boot <em>sgp-webapi</em> que vous sauvegardez un d&#xE9;p&#xF4;t Github : <em>sirh-gestion-personnel-webapi</em>.</li>
+</ul>
+<h2 id="ressource-d&#xE9;partements">Ressource D&#xE9;partements</h2>
+<ul>
+<li>Cr&#xE9;er l&apos;API Web <em>GET /api/departements</em> retourne la liste des d&#xE9;partements au format JSON.</li>
+</ul>
+<h2 id="ressource-collaborateurs">Ressource Collaborateurs</h2>
+<ul>
+<li><p>Cr&#xE9;er les API Web suivantes :</p>
+<ul>
+<li><code>GET /api/collaborateurs</code>  : retourne la liste des collaborateurs au format JSON.</li>
+<li><code>GET /api/collaborateurs?departement=[ID_DEPARTEMENT]</code>: retourne la liste des collaborateurs au format JSON dont le d&#xE9;partement a l&apos;identifiant <em>ID_DEPARTEMENT</em>.</li>
+<li><code>GET /api/collaborateurs/[MATRICULE]</code> : retourne les informations d&apos;un collaborateur.</li>
+<li><code>PUT /api/collaborateurs/[MATRICULE]</code> : modifie un collaborateur (donn&#xE9;es envoy&#xE9;es au format JSON).</li>
+<li><code>GET /api/collaborateurs/[MATRICULE]/banque</code> : r&#xE9;cup&#xE8;re les coordonn&#xE9;es bancaires d&apos;un collaborateur.</li>
+<li><code>PUT /api/collaborateurs/[MATRICULE]/banque</code> : modifie uniquement les coordonn&#xE9;es bancaires d&apos;un collaborateur.</li>
+</ul>
+</li>
+<li><p>Tester via Postman que les API fonctionnent.</p>
+</li>
+</ul>
+<h2 id="application-saisie-de-coordonn&#xE9;es-bancaires">Application Saisie de coordonn&#xE9;es bancaires</h2>
+<p>Les utilisateurs de l&apos;application SGP ont souvent, apr&#xE8;s chaque s&#xE9;rie de recrutement, besoin de saisir massivement des coordonn&#xE9;es bancaires.</p>
+<p>Nous allons cr&#xE9;er une application qui permet d&apos;effectuer une saisie rapide des coordonn&#xE9;es bancaires.</p>
+<h3 id="d&#xE9;p&#xF4;t-github">D&#xE9;p&#xF4;t Github</h3>
+<ul>
+<li><p>Cr&#xE9;er un d&#xE9;p&#xF4;t Github : sirh-saisie-coordonnees-bancaires.</p>
+</li>
+<li><p>Cr&#xE9;er un clone de ce d&#xE9;p&#xF4;t sur votre poste.</p>
+</li>
+</ul>
+<h3 id="outillage">Outillage</h3>
+<ul>
+<li>Si ce n&apos;est pas d&#xE9;j&#xE0; fait, installer la derni&#xE8;re version LTS de NodeJS (<a href="https://nodejs.org/" target="_blank">https://nodejs.org/</a>).<ul>
+<li>Pour v&#xE9;rifier si NodeJS est install&#xE9;, tester la commande <em>node</em> comme suit :</li>
+</ul>
+</li>
+</ul>
+<pre><code>node -v
+npm -v
+</code></pre><ul>
+<li>Installer le serveur <em>live-server</em> :</li>
+</ul>
+<pre><code>npm i -g live-server
+</code></pre><ul>
+<li>D&#xE9;marrer un serveur web. Pour cela, se rendre dans le r&#xE9;pertoire <em>sirh-saisie-coordonnees-bancaires</em> et lancer la commande :</li>
+</ul>
+<pre><code>live-server
+</code></pre><p>Si jamais vous souhaitez changer le port du serveur :</p>
+<pre><code>live-server --port=NUMERO_PORT
+</code></pre><h3 id="application-web">Application Web</h3>
+<ul>
+<li>Cr&#xE9;er une application ind&#xE9;pendante (HTML / JS) et Bootstrap (maquette ci-dessous).</li>
+</ul>
+<pre><code>/sirh-saisie-coordonnees-bancaires
+    index.html
+    app.js
+    /bootstrap
+        ...
+</code></pre><p><img src="images/sgp.05.client.optionnel.png" alt=""></p>
+<ul>
+<li>Impl&#xE9;menter le comportement suivant :<ul>
+<li>A l&apos;initialisation de l&apos;application, la liste des collaborateurs est affich&#xE9;e.</li>
+<li>Le bouton sauvegarder permet d&apos;enregistrer les modifications.</li>
+<li>Si une erreur s&apos;est produite pendant la communication avec l&apos;API Backend, afficher un message d&apos;erreur.</li>
+<li>(Optionnel) Il est possible de filtrer la liste des collaborateurs par nom ou par d&#xE9;partement.</li>
+</ul>
+</li>
+</ul>
+
                                 
                                 </section>
                             
@@ -432,14 +489,10 @@
 
             
                 
-                <a href="../04-cli/" class="navigation navigation-prev " aria-label="Previous page: Spring CLI">
+                <a href="01-tp-exemple.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: TP Démo Spring Boot">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="../99-tp/" class="navigation navigation-next " aria-label="Next page: Travaux Pratiques">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -448,7 +501,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Scripting Groovy","level":"1.6","depth":1,"next":{"title":"Travaux Pratiques","level":"1.7","depth":1,"path":"99-tp/README.md","ref":"99-tp/README.md","articles":[{"title":"TP Démo Spring Boot","level":"1.7.1","depth":2,"path":"99-tp/01-tp-exemple.md","ref":"99-tp/01-tp-exemple.md","articles":[]},{"title":"TP Web Api","level":"1.7.2","depth":2,"path":"99-tp/02-tp-consolidation.md","ref":"99-tp/02-tp-consolidation.md","articles":[]}]},"previous":{"title":"Spring CLI","level":"1.5","depth":1,"path":"04-cli/README.md","ref":"04-cli/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["auto-summary","github-edit"],"ignores":["_book","node_modules","sources"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"github-edit":{"repo":"DevInstitut/formation-spring-boot-1","branch":"master"},"auto-summary":{},"highlight":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","author":"Rossi Oddet","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Formation Spring Boot","gitbook":"*"},"file":{"path":"05-groovy/README.md","mtime":"2018-05-28T12:13:15.395Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-28T12:17:04.916Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"TP Web Api","level":"1.7.2","depth":2,"previous":{"title":"TP Démo Spring Boot","level":"1.7.1","depth":2,"path":"99-tp/01-tp-exemple.md","ref":"99-tp/01-tp-exemple.md","articles":[]},"dir":"ltr"},"config":{"plugins":["auto-summary","github-edit"],"ignores":["_book","node_modules","sources"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"github-edit":{"repo":"DevInstitut/formation-spring-boot-1","branch":"master"},"auto-summary":{},"highlight":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","author":"Rossi Oddet","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Formation Spring Boot","gitbook":"*"},"file":{"path":"99-tp/02-tp-consolidation.md","mtime":"2018-05-28T12:13:15.395Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-28T12:17:04.916Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
