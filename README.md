@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/DevInstitut/formation-spring-boot-1.svg?branch=master)](https://travis-ci.org/DevInstitut/formation-spring-boot-1)
 
-* Version en ligne : https://www.dev-institut.fr/formation-spring-boot-1
+* Version en ligne : https://www.dev-institut.fr/formation-spring-boot
 
 
 ## Contexte
