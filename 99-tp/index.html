@@ -1,0 +1,889 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Travaux Pratiques · Formation Spring Boot</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Rossi Oddet">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../05-groovy/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01-introduction/">
+            
+                <a href="../01-introduction/">
+            
+                    
+                    Spring Boot ?
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01-introduction/01-objectifs.html">
+            
+                <a href="../01-introduction/01-objectifs.html">
+            
+                    
+                    Objectifs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01-introduction/02-prerequis.html">
+            
+                <a href="../01-introduction/02-prerequis.html">
+            
+                    
+                    Prérequis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01-introduction/03-maven.html">
+            
+                <a href="../01-introduction/03-maven.html">
+            
+                    
+                    Créer un projet Spring Boot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01-introduction/04-main.html">
+            
+                <a href="../01-introduction/04-main.html">
+            
+                    
+                    Main Java Classique
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01-introduction/05-plugin-maven.html">
+            
+                <a href="../01-introduction/05-plugin-maven.html">
+            
+                    
+                    Plugin Maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../02-configuration/">
+            
+                <a href="../02-configuration/">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../02-configuration/01-base-de-donnees.html">
+            
+                <a href="../02-configuration/01-base-de-donnees.html">
+            
+                    
+                    Source de données
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../02-configuration/02-webmvc.html">
+            
+                <a href="../02-configuration/02-webmvc.html">
+            
+                    
+                    Web MVC
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../03-ressources/">
+            
+                <a href="../03-ressources/">
+            
+                    
+                    Ressources
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03-ressources/01-web.html">
+            
+                <a href="../03-ressources/01-web.html">
+            
+                    
+                    Ressources Web
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03-ressources/02-webjars.html">
+            
+                <a href="../03-ressources/02-webjars.html">
+            
+                    
+                    WebJars
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../04-cli/">
+            
+                <a href="../04-cli/">
+            
+                    
+                    Spring CLI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../05-groovy/">
+            
+                <a href="../05-groovy/">
+            
+                    
+                    Scripting Groovy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Travaux Pratiques
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Travaux Pratiques</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="travaux-pratiques">Travaux Pratiques</h1>
+<p>Spring est le leader des frameworks et outils Java pour r&#xE9;aliser des applications d&apos;entreprise.</p>
+<p>Spring apporte un &#xE9;cosyst&#xE8;me riche et surtout flexible. 
+La flexibilit&#xE9; a un co&#xFB;t : les multiples configurations n&#xE9;cessaires pour prendre des d&#xE9;cisions.</p>
+<p>Spring a initi&#xE9; le projet <em>Spring Boot</em> comme un framework qui prend quelques d&#xE9;cisions initiales pour vous gr&#xE2;ce au principe de l&apos;<em>autoconfiguration</em> : Spring Boot d&#xE9;tecte la pr&#xE9;sence d&apos;une librairie dans le classpath et s&apos;autoconfigure.</p>
+<p>Pour d&#xE9;marrer un projet Spring rapidement, le site <a href="http://start.spring.io" target="_blank">http://start.spring.io</a> est pratique.</p>
+<p>Afin d&apos;illustrer la perspective de productivit&#xE9; avec l&apos;&#xE9;cosyst&#xE8;me Spring, nous allons faire un tour d&apos;horizon des possibilit&#xE9;s.</p>
+<h2 id="initialisation-du-projet">Initialisation du projet</h2>
+<h3 id="g&#xE9;n&#xE9;ration-du-projet">G&#xE9;n&#xE9;ration du projet</h3>
+<ul>
+<li><p>Rendez-vous sur le site <a href="http://start.spring.io" target="_blank">http://start.spring.io</a>.</p>
+</li>
+<li><p>G&#xE9;n&#xE9;rer un projet avec les informations suivantes :</p>
+</li>
+</ul>
+<p><strong> Group : dev
+</strong> Artifact : exemple-spring-boot
+** Dependencies : <em>Web</em>, <em>JPA</em>, <em>H2</em>, <em>Devtools</em>, <em>MySQL</em>, <em>AOP</em>.</p>
+<ul>
+<li>D&#xE9;compresser l&apos;archive dans le r&#xE9;pertoire de votre choix.</li>
+</ul>
+<h3 id="projet-github">Projet Github</h3>
+<ul>
+<li><p>Cr&#xE9;er un d&#xE9;p&#xF4;t Github : <em>exemple-spring-boot</em>.</p>
+</li>
+<li><p>Envoyer vos sources vers Github :</p>
+</li>
+</ul>
+<pre><code>cd exemple-spring-boot
+git init
+git add .
+git commit -m &quot;init Spring Boot&quot;
+git remote add origin https://github.com/VOTRE_NOM_UTILISATEUR/exemple-spring-boot.git
+git pull origin master
+git push origin master
+</code></pre><h3 id="sts">STS</h3>
+<ul>
+<li><p>Importer le projet sous STS.</p>
+</li>
+<li><p>D&#xE9;marrer l&apos;application via la classe <em>ExempleSpringBootApplication</em> (clic droit &gt; <em>Run As</em> &gt; <em>Spring Boot App</em>).</p>
+</li>
+<li><p>Arr&#xEA;ter l&apos;application.</p>
+</li>
+<li><p>D&#xE9;marrer l&apos;application via la t&#xE2;che Maven :</p>
+</li>
+</ul>
+<pre><code>mvn spring-boot:run
+</code></pre><ul>
+<li><p>Arr&#xEA;ter l&apos;application.</p>
+</li>
+<li><p>Renommer le package <em>dev.exemplespringboot</em> en <em>dev.exemple</em>.</p>
+</li>
+</ul>
+<h2 id="premier-service-avec-spring-boot">Premier service avec Spring Boot</h2>
+<ul>
+<li>Cr&#xE9;er une entit&#xE9; <em>dev.exemple.entite</em> :</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-meta">@Entity</span>
+<span class="hljs-meta">@Table</span>(name = <span class="hljs-string">&quot;EXEMPLE&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Exemple</span> </span>{
+
+<span class="hljs-meta">@Id</span>
+<span class="hljs-meta">@GeneratedValue</span>(strategy = GenerationType.IDENTITY)
+<span class="hljs-meta">@Column</span>(name = <span class="hljs-string">&quot;ID&quot;</span>)
+<span class="hljs-keyword">private</span> Integer id;
+
+<span class="hljs-meta">@Column</span>(name = <span class="hljs-string">&quot;CHAMP_1&quot;</span>)
+<span class="hljs-keyword">private</span> String champ1;
+
+<span class="hljs-meta">@Column</span>(name = <span class="hljs-string">&quot;CHAMP_2&quot;</span>)
+<span class="hljs-keyword">private</span> String champ2;
+
+...
+
+}
+</code></pre>
+<ul>
+<li>Cr&#xE9;er un repository <em>dev.exemple.repository.ExempleRepository</em> :</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">ExempleRepository</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">JpaRepository</span>&lt;<span class="hljs-title">Exemple</span>, <span class="hljs-title">Integer</span>&gt;</span>{
+
+}
+</code></pre>
+<ul>
+<li>Cr&#xE9;er un contr&#xF4;leur <em>dev.exemple.controller.ExempleApiController</em> :</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-meta">@RestController</span>
+<span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/exemples&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ExempleApiController</span> </span>{
+
+<span class="hljs-meta">@Autowired</span> <span class="hljs-keyword">private</span> ExempleRepository exempleRepo;
+
+<span class="hljs-meta">@GetMapping</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Exemple&gt; <span class="hljs-title">listerexemples</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.exempleRepo.findAll();
+}
+
+}
+</code></pre>
+<ul>
+<li>Configurer le fichier <em>src/main/resources/application.properties</em> :</li>
+</ul>
+<p>[source, properties]</p>
+<pre><code># datasource
+spring.datasource.url = jdbc:h2:mem:testdb
+spring.datasource.driver-class-name = org.h2.Driver
+spring.datasource.username = sa
+spring.datasource.password =
+spring.jpa.generate-ddl=true
+</code></pre><ul>
+<li><p>D&#xE9;marrer l&apos;application.</p>
+</li>
+<li><p>Connectez-vous &#xE0; la console <em>H2</em> : <a href="http://localhost:8080/h2-console/" target="_blank">http://localhost:8080/h2-console/</a> avec les informations valoris&#xE9;es dans le fichier <em>src/main/resources/application.properties</em>.</p>
+</li>
+<li><p>Ajouter des donn&#xE9;es &#xE0; la table <em>EXEMPLE</em>.</p>
+</li>
+<li><p>Tester le service d&#xE9;velopp&#xE9; via l&apos;adresse : <a href="http://localhost:8080/exemples" target="_blank">http://localhost:8080/exemples</a>. V&#xE9;rifier que les donn&#xE9;es s&apos;affichent.</p>
+</li>
+<li><p>Cr&#xE9;er un jar ex&#xE9;cutable via Maven :</p>
+</li>
+</ul>
+<pre><code>cd exemple-spring-boot
+mvn clean package -Dmaven.test.skip
+</code></pre><ul>
+<li>D&#xE9;marrer l&apos;application en ligne de commande :</li>
+</ul>
+<pre><code>java -jar target/exemple-spring-boot-0.0.1-SNAPSHOT.jar
+</code></pre><ul>
+<li>Arr&#xEA;ter l&apos;application.</li>
+</ul>
+<h2 id="templating--webjar">Templating &amp; WebJar</h2>
+<h3 id="templating">Templating</h3>
+<p>Spring Boot supporte plusieurs moteurs de templating :</p>
+<ul>
+<li>Freemarker</li>
+<li>Groovy</li>
+<li>Thymeleaf</li>
+<li>Mustache</li>
+<li>JSP (avec quelques limitations)</li>
+</ul>
+<p>Les templates se trouvent par d&#xE9;faut dans le r&#xE9;pertoire <em>src/main/resources/templates</em>.</p>
+<p>D&#xFB; &#xE0; des limitations de Tomcat, le templating JSP ne fonctionne pas avec un JAR ex&#xE9;cutable. Il faut un WAR (qui peut-&#xEA;tre aussi ex&#xE9;cutable).</p>
+<p>Faisons &#xE0; pr&#xE9;sent les modifications n&#xE9;cessaires pour utiliser JSP comme moteur de templating.</p>
+<ul>
+<li>Modifier le fichier <em>pom.xml</em> comme suit :</li>
+</ul>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">project</span> <span class="hljs-attr">...</span>&gt;</span>
+...
+<span class="hljs-tag">&lt;<span class="hljs-name">packaging</span>&gt;</span>war<span class="hljs-tag">&lt;/<span class="hljs-name">packaging</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">1</span>&gt;</span>
+....
+<span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span>
+    ...
+    <span class="hljs-comment">&lt;!-- D&#xE9;pendances support de JSP &amp; JSTL --&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>javax.servlet<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>jstl<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-tomcat<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>provided<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.apache.tomcat.embed<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>tomcat-embed-jasper<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>provided<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span>
+...
+<span class="hljs-tag">&lt;/<span class="hljs-name">project</span>&gt;</span>
+</code></pre>
+<p><1> Modifier le type de packaging de <em>jar</em> en <em>war</em>.</1></p>
+<p><2> Ajouter les 3 d&#xE9;pendances.</2></p>
+<ul>
+<li>Compl&#xE9;ter le fichier <em>src/main/resources/application.properties</em> :</li>
+</ul>
+<p>[source, properties]</p>
+<pre><code># ...
+# mvc
+spring.mvc.view.prefix = /WEB-INF/views/
+spring.mvc.view.suffix = .jsp
+</code></pre><ul>
+<li>Ajouter un contr&#xF4;leur <em>dev.exemple.controller.AccueilController</em> :</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-meta">@Controller</span>
+<span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/accueil&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AccueilController</span> </span>{
+
+<span class="hljs-meta">@Autowired</span> <span class="hljs-keyword">private</span> ExempleRepository exempleRepo;
+
+<span class="hljs-meta">@GetMapping</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> ModelAndView <span class="hljs-title">afficherAccueil</span><span class="hljs-params">()</span> </span>{
+    ModelAndView mv = <span class="hljs-keyword">new</span> ModelAndView();
+    mv.setViewName(<span class="hljs-string">&quot;accueil&quot;</span>); &lt;<span class="hljs-number">1</span>&gt;
+    mv.addObject(<span class="hljs-string">&quot;listeExemples&quot;</span>, exempleRepo.findAll()); &lt;<span class="hljs-number">2</span>&gt;
+    <span class="hljs-keyword">return</span> mv;
+}
+
+}
+</code></pre>
+<p><1> Nom logique de la vue.</1></p>
+<p><2> Liste d&apos;exemples dans le mod&#xE8;le Spring MVC.</2></p>
+<ul>
+<li>Ajouter un fichier <em>src/main/webapp/WEB-INF/views/accueil.jsp</em> :</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">%@</span> <span class="hljs-attr">page</span> <span class="hljs-attr">language</span>=<span class="hljs-string">&quot;java&quot;</span> <span class="hljs-attr">contentType</span>=<span class="hljs-string">&quot;text/html; charset=UTF-8&quot;</span>
+<span class="hljs-attr">pageEncoding</span>=<span class="hljs-string">&quot;UTF-8&quot;</span><span class="hljs-string">%</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">%@</span> <span class="hljs-attr">taglib</span> <span class="hljs-attr">prefix</span>=<span class="hljs-string">&quot;c&quot;</span> <span class="hljs-attr">uri</span>=<span class="hljs-string">&quot;http://java.sun.com/jsp/jstl/core&quot;</span><span class="hljs-string">%</span>&gt;</span>
+<span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Exemple<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;table&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Id<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Champ 1<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Champ 2<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">c:forEach</span> <span class="hljs-attr">items</span>=<span class="hljs-string">&quot;${listeExemples}&quot;</span> <span class="hljs-attr">var</span>=<span class="hljs-string">&quot;ex&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>${ex.id}<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>${ex.champ1}<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>${ex.champ2}<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">c:forEach</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<ul>
+<li><p>D&#xE9;marrer l&apos;application.</p>
+</li>
+<li><p>Ajouter des donn&#xE9;es via la console <em>H2</em>.</p>
+</li>
+<li><p>V&#xE9;rifier l&apos;affichage de la page d&apos;accueil : <a href="http://localhost:8080/accueil" target="_blank">http://localhost:8080/accueil</a>.</p>
+</li>
+</ul>
+<h3 id="webjars">WebJars</h3>
+<p>Spring Boot est pr&#xE9;-configur&#xE9; pour g&#xE9;rer les <em>WebJars</em>. Il s&apos;agit de librairies/frameworks UI (comme Twitter Bootstrap, JQuery, Angular, ...) packag&#xE9;s sous la forme d&apos;un fichier Jar.</p>
+<p>Vous souhaitez vous un aper&#xE7;u de l&apos;&#xE9;cosyst&#xE8;me ? Visitez le site :<a href="http://www.webjars.org/" target="_blank">http://www.webjars.org/</a>. Cherchez y la biblioth&#xE8;que <em>Bootstrap</em>.</p>
+<p>Nous allons utiliser un WebJar pour Twitter Bootstap.</p>
+<ul>
+<li>Ajouter la d&#xE9;pendance suivante :</li>
+</ul>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.webjars<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>bootstrap<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>3.3.7<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>runtime<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Compl&#xE9;ter la page <em>accueil.jsp</em> pour ajouter le lien vers Bootstrap.</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;webjars/bootstrap/3.3.7/css/bootstrap.css&quot;</span> /&gt;</span>
+</code></pre>
+<ul>
+<li><p>V&#xE9;rifier que Bootstrap est bien pris en compte.</p>
+</li>
+<li><p>G&#xE9;n&#xE9;rer un WAR ex&#xE9;cutable via Maven :</p>
+</li>
+</ul>
+<pre><code>cd exemple-spring-boot
+mvn clean package -Dmaven.test.skip
+</code></pre><ul>
+<li>D&#xE9;marrer l&apos;application en ligne de commande :</li>
+</ul>
+<pre><code>java -jar target/exemple-spring-boot-0.0.1-SNAPSHOT.war
+</code></pre><ul>
+<li>V&#xE9;rifier que la page <em>accueil</em> s&apos;affiche.</li>
+</ul>
+<h2 id="spring-security">Spring Security</h2>
+<p>Spring Security s&apos;int&#xE8;gre bien dans un projet Spring Boot avec un minimum de configuration.</p>
+<p>Faisons un exemple.</p>
+<ul>
+<li>Ajouter une d&#xE9;pendance vers le Starter Spring Security :</li>
+</ul>
+<pre><code class="lang-xml"><span class="hljs-comment">&lt;!-- Spring Security --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-security<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Ajouter au projet la classe de configuration <em>dev.exemple.WebSecurityConfig</em> :</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-meta">@Configuration</span>
+<span class="hljs-meta">@EnableWebSecurity</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WebSecurityConfig</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">WebSecurityConfigurerAdapter</span> </span>{
+<span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configure</span><span class="hljs-params">(HttpSecurity http)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+    http.authorizeRequests().anyRequest().authenticated().and().formLogin();
+}
+
+<span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configure</span><span class="hljs-params">(AuthenticationManagerBuilder auth)</span> <span class="hljs-keyword">throws</span> Exception </span>{
+    auth.inMemoryAuthentication().withUser(<span class="hljs-string">&quot;user&quot;</span>).password(<span class="hljs-string">&quot;password&quot;</span>).roles(<span class="hljs-string">&quot;USER&quot;</span>);
+}
+
+}
+</code></pre>
+<ul>
+<li>Tester l&apos;application. V&#xE9;rifier que l&apos;acc&#xE8;s &#xE0; la page d&apos;accueil est soumis &#xE0; authentification.</li>
+</ul>
+<h2 id="spring-boot-cli">Spring Boot CLI</h2>
+<h3 id="installation">Installation</h3>
+<p><em>Spring Boot CLI</em> est un outil en ligne de commande permettant de rapidement prototyper une application Spring.</p>
+<p>Il permet d&apos;ex&#xE9;cuter des scripts <em>Groovy</em>.</p>
+<ul>
+<li><p>T&#xE9;l&#xE9;charger et d&#xE9;compresser l&apos;archive : <a href="http://repo.spring.io/release/org/springframework/boot/spring-boot-cli/1.5.3.RELEASE/spring-boot-cli-1.5.3.RELEASE-bin.zip" target="_blank">http://repo.spring.io/release/org/springframework/boot/spring-boot-cli/1.5.3.RELEASE/spring-boot-cli-1.5.3.RELEASE-bin.zip</a></p>
+</li>
+<li><p>Ajouter le r&#xE9;pertoire d&#xE9;compresser dans la variable <em>PATH</em>.</p>
+</li>
+<li><p>V&#xE9;rifier que vous avez acc&#xE8;s &#xE0; la commande <em>spring</em> :</p>
+</li>
+</ul>
+<pre><code>spring --version
+</code></pre><h3 id="exemple-de-service-rest">Exemple de service REST</h3>
+<ul>
+<li>Cr&#xE9;er un fichier <em>cotisations.groovy</em> avec le contenu suivant :</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-meta">@RestController</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CotisationsController</span> </span>{
+
+  <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/&quot;</span>)
+  <span class="hljs-function">String <span class="hljs-title">lister</span><span class="hljs-params">()</span> </span>{
+      <span class="hljs-string">&quot;Les cotisations arrivent bient&#xF4;t&quot;</span>
+  }
+
+}
+</code></pre>
+<ul>
+<li>Ex&#xE9;cuter le fichier :</li>
+</ul>
+<pre><code>spring run cotisations.groovy
+</code></pre><p>Pour changer le port d&apos;ex&#xE9;cution : </p>
+<pre><code>spring run cotisations.groovy -- --server.port=9000
+</code></pre><ul>
+<li>Acc&#xE9;der &#xE0; la racine de l&apos;application via le navigateur. V&#xE9;rifier que la cha&#xEE;ne de caract&#xE8;res &quot;Les cotisations arrivent bient&#xF4;t&quot; s&apos;affichent.</li>
+</ul>
+<h3 id="acc&#xE8;s-&#xE0;-une-base-de-donn&#xE9;es">Acc&#xE8;s &#xE0; une base de donn&#xE9;es</h3>
+<ul>
+<li>Compl&#xE9;ter le fichier <em>cotisations.groovy</em> comme suit :</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> org.springframework.context.annotation.Bean;
+<span class="hljs-keyword">import</span> org.springframework.context.annotation.Configuration;
+<span class="hljs-keyword">import</span> org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+<span class="hljs-meta">@Configuration</span>
+<span class="hljs-meta">@Grab</span>(group=<span class="hljs-string">&apos;mysql&apos;</span>, module=<span class="hljs-string">&apos;mysql-connector-java&apos;</span>, version=<span class="hljs-string">&apos;5.1.41&apos;</span>)
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DataSourceConfig</span> </span>{
+<span class="hljs-meta">@Bean</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> DataSource <span class="hljs-title">dataSource</span><span class="hljs-params">()</span> </span>{
+    DriverManagerDataSource dataSource = <span class="hljs-keyword">new</span> DriverManagerDataSource();
+    dataSource.setDriverClassName(<span class="hljs-string">&quot;com.mysql.jdbc.Driver&quot;</span>);
+    dataSource.setUrl(<span class="hljs-string">&quot;jdbc:mysql://localhost:3306/sirh-paie?useSSL=false&quot;</span>);
+    dataSource.setUsername(<span class="hljs-string">&quot;sirh-paie&quot;</span>);
+    dataSource.setPassword(<span class="hljs-string">&quot;sirh-paie&quot;</span>);
+    <span class="hljs-keyword">return</span> dataSource;
+}
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cotisation</span> </span>{
+def id
+def code
+def libelle
+def tauxSalarial
+def tauxPatronal
+}
+
+<span class="hljs-meta">@RestController</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CotisationsController</span> </span>{
+
+<span class="hljs-meta">@Autowired</span> JdbcTemplate jdbcTemplate;
+
+RowMapper&lt;Cotisation&gt; rowMapper = {rs,num -&gt; <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Cotisation(
+    id:rs.getInt(<span class="hljs-string">&quot;ID&quot;</span>), 
+    libelle:rs.getString(<span class="hljs-string">&quot;LIBELLE&quot;</span>),
+    code:rs.getString(<span class="hljs-string">&quot;CODE&quot;</span>),
+    tauxSalarial:rs.getString(<span class="hljs-string">&quot;TAUX_SALARIAL&quot;</span>),
+    tauxPatronal:rs.getString(<span class="hljs-string">&quot;TAUX_PATRONAL&quot;</span>)
+)}
+
+  <span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/&quot;</span>)
+  <span class="hljs-function">List&lt;Cotisation&gt; <span class="hljs-title">lister</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.jdbcTemplate.query(<span class="hljs-string">&quot;select * from COTISATION&quot;</span>, rowMapper)
+  }
+
+}
+</code></pre>
+<ul>
+<li>D&#xE9;marrer lapplication</li>
+</ul>
+<pre><code>spring run cotisations.groovy
+</code></pre><ul>
+<li><p>V&#xE9;rifier que vous acc&#xE9;dez &#xE0; la liste des cotisations en base de donn&#xE9;es.</p>
+</li>
+<li><p>S&#xE9;parer le code en 3 fichiers :</p>
+</li>
+</ul>
+<pre><code>entites.groovy        &lt;1&gt;
+datasource.groovy     &lt;2&gt;
+cotisations.groovy    &lt;3&gt;
+</code></pre><p><1> la classe Cotisation</1></p>
+<p><2> la classe DataSourceConfig (avec les imports)</2></p>
+<p><3> la classe CotisationsController</3></p>
+<ul>
+<li>D&#xE9;marrer l&apos;application comme suit :</li>
+</ul>
+<pre><code>spring run *.groovy
+</code></pre><ul>
+<li>V&#xE9;rifier que vous acc&#xE9;dez &#xE0; la liste des cotisations en base de donn&#xE9;es.</li>
+</ul>
+<h3 id="packaging">Packaging</h3>
+<ul>
+<li>G&#xE9;n&#xE9;rer un JAR ex&#xE9;cutable :</li>
+</ul>
+<pre><code>spring jar cotisations-web-api.jar *.groovy
+</code></pre><p>Par d&#xE9;faut, le packaging :</p>
+<ul>
+<li>inclut : <em>public/<strong>, resources/</strong>, static/<strong>, templates/</strong>, META-INF/<em>*, </em></em></li>
+<li>exclut : <em>.<em>, repository/<strong>, build/</strong>, target/<strong>, </strong>/</em>.jar, <em>*/</em>.groovy</em>.</li>
+</ul>
+<ul>
+<li>D&#xE9;marrer le serveur :</li>
+</ul>
+<pre><code>java -jar cotisations-web-api.jar
+</code></pre><ul>
+<li>V&#xE9;rifier que vous acc&#xE9;dez &#xE0; la liste des cotisations en base de donn&#xE9;es.</li>
+</ul>
+<h3 id="initialiser-un-projet">Initialiser un projet</h3>
+<p>Spring Boot CLI permet de g&#xE9;n&#xE9;rer un projet Spring Boot via l&apos;outil : <a href="https://start.spring.io/" target="_blank">https://start.spring.io/</a>.</p>
+<ul>
+<li>G&#xE9;n&#xE9;rer un projet :</li>
+</ul>
+<pre><code>spring init --dependencies=web,data-jpa test-spring-cli
+</code></pre><ul>
+<li>Pour avoir acc&#xE8;s &#xE0; la liste des configurations possibles :</li>
+</ul>
+<pre><code>spring init --list
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../05-groovy/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Scripting Groovy">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Travaux Pratiques","level":"1.7","depth":1,"previous":{"title":"Scripting Groovy","level":"1.6","depth":1,"path":"05-groovy/README.md","ref":"05-groovy/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["auto-summary","github-edit"],"ignores":["_book","node_modules","sources"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"github-edit":{"repo":"DevInstitut/formation-spring-boot-1","branch":"master"},"auto-summary":{},"highlight":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","author":"Rossi Oddet","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Formation Spring Boot","gitbook":"*"},"file":{"path":"99-tp/README.md","mtime":"2018-05-28T12:06:21.705Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-28T12:09:46.588Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-edit/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
