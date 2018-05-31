@@ -3,7 +3,8 @@
   "author": "Rossi Oddet",
   "plugins": [
     "auto-summary",
-    "github-edit"
+    "github-edit",
+    "theme-dev-institut"
   ],
   "ignores": [
     "_book",

@@ -2,6 +2,7 @@
 
 ## Application Backend Gestion Personnel
 
+* Créer un fork du projet `sgp-api`.
 * Créer une application Spring Boot _sgp-webapi_ que vous sauvegardez un dépôt Github : _sirh-gestion-personnel-webapi_.
 
 ## Ressource Départements
@@ -15,7 +16,7 @@
  * `GET /api/collaborateurs?departement=[ID_DEPARTEMENT]`: retourne la liste des collaborateurs au format JSON dont le département a l'identifiant _ID_DEPARTEMENT_.
  * `GET /api/collaborateurs/[MATRICULE]` : retourne les informations d'un collaborateur.
  * `PUT /api/collaborateurs/[MATRICULE]` : modifie un collaborateur (données envoyées au format JSON).
- * `GET /api/collaborateurs/[MATRICULE]/banque` : récupère les coordonnées bancaires d'un collaborateur.
+ * `GET /api/collaborateurs/[MATRICULE]/banque` : récupère les coordonnées bancaires d'un collaborateur (nom de la banque, iban et bic)
  * `PUT /api/collaborateurs/[MATRICULE]/banque` : modifie uniquement les coordonnées bancaires d'un collaborateur.
 
 * Tester via Postman que les API fonctionnent.
@@ -28,10 +29,7 @@ Nous allons créer une application qui permet d'effectuer une saisie rapide des 
 
 ### Dépôt Github
 
-* Créer un dépôt Github : sirh-saisie-coordonnees-bancaires.
-
-* Créer un clone de ce dépôt sur votre poste.
-
+* Créer un fork du projet `scb-web`.
 
 ### Outillage
 * Si ce n'est pas déjà fait, installer la dernière version LTS de NodeJS (https://nodejs.org/).
