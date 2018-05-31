@@ -3,7 +3,7 @@
 ## Application Backend Gestion Personnel
 
 * Créer un fork du projet `sgp-api`.
-* Créer une application Spring Boot _sgp-webapi_ (sans Spring Security) que vous sauvegardez un dépôt Github : _sirh-gestion-personnel-webapi_.
+* Créer une application Spring Boot (sans Spring Security).
 
 ## Ressource Départements
 
