@@ -3,7 +3,7 @@
 ## Application Backend Gestion Personnel
 
 * Créer un fork du projet `sgp-api`.
-* Créer une application Spring Boot _sgp-webapi_ que vous sauvegardez un dépôt Github : _sirh-gestion-personnel-webapi_.
+* Créer une application Spring Boot _sgp-webapi_ (sans Spring Security) que vous sauvegardez un dépôt Github : _sirh-gestion-personnel-webapi_.
 
 ## Ressource Départements
 
@@ -20,6 +20,63 @@
  * `PUT /api/collaborateurs/[MATRICULE]/banque` : modifie uniquement les coordonnées bancaires d'un collaborateur.
 
 * Tester via Postman que les API fonctionnent.
+
+## Déployer l'application sur Heroku
+
+* Créer une branche `production`.
+
+* Modifier la partie `<build>` du pom.xml.
+
+```xml
+<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			
+			<!-- RUBRIQUE A AJOUTER -->
+			<plugin>
+				<groupId>com.heroku.sdk</groupId>
+				<artifactId>heroku-maven-plugin</artifactId>
+				<configuration>
+					<processTypes>
+						<web>java $JAVA_OPTS -cp target/classes:target/dependency/* Main</web>
+					</processTypes>
+				</configuration>
+			</plugin>
+		</plugins>
+</build>
+```
+
+* Ajouter la dépendance vers `PostgreSQL` .
+
+```xml
+<dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <scope>runtime</scope>
+</dependency>
+```
+
+* Modifier le fichier `application.properties` comme suit :
+
+
+
+```properties
+spring.jpa.show-sql=true
+spring.jpa.generate-ddl=true
+
+# pour un bug de déploiement avec PostgreSQL chez Heroku
+spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults = false
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQL9Dialect
+```
+
+
+* Déployer la branche de production.
+
+* Mettre à jour la pull request avec le lien vers l'application.
+
 
 ## Application Saisie de coordonnées bancaires
 
@@ -77,3 +134,7 @@ live-server --port=NUMERO_PORT
  * Le bouton sauvegarder permet d'enregistrer les modifications.
  * Si une erreur s'est produite pendant la communication avec l'API Backend, afficher un message d'erreur.
  * (Optionnel) Il est possible de filtrer la liste des collaborateurs par nom ou par département.
+ 
+* Déployer l'application avec les `Github Pages`.
+
+* Mettre à jour le lien dans la pull request.
