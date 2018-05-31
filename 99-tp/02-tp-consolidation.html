@@ -64,9 +64,16 @@
     </head>
     <body>
         
+
+
 <div class="book">
     <div class="book-summary">
         
+            <div class="theme-code-header">
+                <a href="./" class="link">
+                    <h1 class="title">Formation Spring Boot</h1>
+                </a>
+            </div>
             
 <div id="book-search-input" role="search">
     <input type="text" placeholder="Type to search" />
@@ -351,9 +358,7 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
-        </a>
+        <a href="" target="_blank" class="gitbook-link">Rossi Oddet</a>
     </li>
 </ul>
 
@@ -393,6 +398,7 @@
                                 <h1 id="tp-web-api">TP Web Api</h1>
 <h2 id="application-backend-gestion-personnel">Application Backend Gestion Personnel</h2>
 <ul>
+<li>Cr&#xE9;er un fork du projet <code>sgp-api</code>.</li>
 <li>Cr&#xE9;er une application Spring Boot <em>sgp-webapi</em> que vous sauvegardez un d&#xE9;p&#xF4;t Github : <em>sirh-gestion-personnel-webapi</em>.</li>
 </ul>
 <h2 id="ressource-d&#xE9;partements">Ressource D&#xE9;partements</h2>
@@ -407,7 +413,7 @@
 <li><code>GET /api/collaborateurs?departement=[ID_DEPARTEMENT]</code>: retourne la liste des collaborateurs au format JSON dont le d&#xE9;partement a l&apos;identifiant <em>ID_DEPARTEMENT</em>.</li>
 <li><code>GET /api/collaborateurs/[MATRICULE]</code> : retourne les informations d&apos;un collaborateur.</li>
 <li><code>PUT /api/collaborateurs/[MATRICULE]</code> : modifie un collaborateur (donn&#xE9;es envoy&#xE9;es au format JSON).</li>
-<li><code>GET /api/collaborateurs/[MATRICULE]/banque</code> : r&#xE9;cup&#xE8;re les coordonn&#xE9;es bancaires d&apos;un collaborateur.</li>
+<li><code>GET /api/collaborateurs/[MATRICULE]/banque</code> : r&#xE9;cup&#xE8;re les coordonn&#xE9;es bancaires d&apos;un collaborateur (nom de la banque, iban et bic)</li>
 <li><code>PUT /api/collaborateurs/[MATRICULE]/banque</code> : modifie uniquement les coordonn&#xE9;es bancaires d&apos;un collaborateur.</li>
 </ul>
 </li>
@@ -419,10 +425,7 @@
 <p>Nous allons cr&#xE9;er une application qui permet d&apos;effectuer une saisie rapide des coordonn&#xE9;es bancaires.</p>
 <h3 id="d&#xE9;p&#xF4;t-github">D&#xE9;p&#xF4;t Github</h3>
 <ul>
-<li><p>Cr&#xE9;er un d&#xE9;p&#xF4;t Github : sirh-saisie-coordonnees-bancaires.</p>
-</li>
-<li><p>Cr&#xE9;er un clone de ce d&#xE9;p&#xF4;t sur votre poste.</p>
-</li>
+<li>Cr&#xE9;er un fork du projet <code>scb-web</code>.</li>
 </ul>
 <h3 id="outillage">Outillage</h3>
 <ul>
@@ -501,10 +504,11 @@ npm -v
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"TP Web Api","level":"1.7.2","depth":2,"previous":{"title":"TP Démo Spring Boot","level":"1.7.1","depth":2,"path":"99-tp/01-tp-exemple.md","ref":"99-tp/01-tp-exemple.md","articles":[]},"dir":"ltr"},"config":{"plugins":["auto-summary","github-edit"],"ignores":["_book","node_modules","sources"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"github-edit":{"repo":"DevInstitut/formation-spring-boot-1","branch":"master"},"auto-summary":{},"highlight":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"theme":"default","author":"Rossi Oddet","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Formation Spring Boot","gitbook":"*"},"file":{"path":"99-tp/02-tp-consolidation.md","mtime":"2018-05-28T12:41:30.771Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-28T12:44:03.447Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"TP Web Api","level":"1.7.2","depth":2,"previous":{"title":"TP Démo Spring Boot","level":"1.7.1","depth":2,"path":"99-tp/01-tp-exemple.md","ref":"99-tp/01-tp-exemple.md","articles":[]},"dir":"ltr"},"config":{"plugins":["auto-summary","github-edit","theme-dev-institut"],"ignores":["_book","node_modules","sources"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"auto-summary":{},"search":{},"theme-dev-institut":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"github-edit":{"repo":"DevInstitut/formation-spring-boot-1","branch":"master"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"insert-logo":{"url":"http://www.dev-institut.fr/img/logo.svg","style":"width: 50px"}},"theme":"default","author":"Rossi Oddet","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Formation Spring Boot","gitbook":"*"},"file":{"path":"99-tp/02-tp-consolidation.md","mtime":"2018-05-31T06:39:24.150Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-31T06:41:53.578Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
+
 
         
     <script src="../gitbook/gitbook.js"></script>
