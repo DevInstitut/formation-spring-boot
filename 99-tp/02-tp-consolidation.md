@@ -49,7 +49,7 @@
 </build>
 ```
 
-* Ajouter la dépendance vers `PostgreSQL` .
+* Ajouter la dépendance vers `PostgreSQL` et supprimer les autres drivers.
 
 ```xml
 <dependency>

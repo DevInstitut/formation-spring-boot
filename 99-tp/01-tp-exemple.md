@@ -20,9 +20,9 @@ Afin d'illustrer la perspective de productivité avec l'écosystème Spring, nou
 
 * Générer un projet avec les informations suivantes :
 
-** Group : dev
-** Artifact : exemple-spring-boot
-** Dependencies : _Web_, _JPA_, _H2_, _Devtools_, _MySQL_, _AOP_.
+ * Group : dev
+ * Artifact : exemple-spring-boot
+ * Dependencies : _Web_, _JPA_, _H2_, _Devtools_, _MySQL_.
 
 * Décompresser l'archive dans le répertoire de votre choix.
 
