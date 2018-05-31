@@ -399,7 +399,7 @@
 <h2 id="application-backend-gestion-personnel">Application Backend Gestion Personnel</h2>
 <ul>
 <li>Cr&#xE9;er un fork du projet <code>sgp-api</code>.</li>
-<li>Cr&#xE9;er une application Spring Boot <em>sgp-webapi</em> que vous sauvegardez un d&#xE9;p&#xF4;t Github : <em>sirh-gestion-personnel-webapi</em>.</li>
+<li>Cr&#xE9;er une application Spring Boot <em>sgp-webapi</em> (sans Spring Security) que vous sauvegardez un d&#xE9;p&#xF4;t Github : <em>sirh-gestion-personnel-webapi</em>.</li>
 </ul>
 <h2 id="ressource-d&#xE9;partements">Ressource D&#xE9;partements</h2>
 <ul>
@@ -418,6 +418,58 @@
 </ul>
 </li>
 <li><p>Tester via Postman que les API fonctionnent.</p>
+</li>
+</ul>
+<h2 id="d&#xE9;ployer-lapplication-sur-heroku">D&#xE9;ployer l&apos;application sur Heroku</h2>
+<ul>
+<li><p>Cr&#xE9;er une branche <code>production</code>.</p>
+</li>
+<li><p>Modifier la partie <code>&lt;build&gt;</code> du pom.xml.</p>
+</li>
+</ul>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">build</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">plugins</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span>
+
+            <span class="hljs-comment">&lt;!-- RUBRIQUE A AJOUTER --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.heroku.sdk<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>heroku-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">configuration</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">processTypes</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">web</span>&gt;</span>java $JAVA_OPTS -cp target/classes:target/dependency/* Main<span class="hljs-tag">&lt;/<span class="hljs-name">web</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">processTypes</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">configuration</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">plugin</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">plugins</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">build</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Ajouter la d&#xE9;pendance vers <code>PostgreSQL</code> .</li>
+</ul>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.postgresql<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>postgresql<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>runtime<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Modifier le fichier <code>application.properties</code> comme suit :</li>
+</ul>
+<pre><code class="lang-properties">spring.jpa.show-sql=true
+spring.jpa.generate-ddl=true
+
+# pour un bug de d&#xE9;ploiement avec PostgreSQL chez Heroku
+spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults = false
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQL9Dialect
+</code></pre>
+<ul>
+<li><p>D&#xE9;ployer la branche de production.</p>
+</li>
+<li><p>Mettre &#xE0; jour la pull request avec le lien vers l&apos;application.</p>
 </li>
 </ul>
 <h2 id="application-saisie-de-coordonn&#xE9;es-bancaires">Application Saisie de coordonn&#xE9;es bancaires</h2>
@@ -457,12 +509,17 @@ npm -v
         ...
 </code></pre><p><img src="images/sgp.05.client.optionnel.png" alt=""></p>
 <ul>
-<li>Impl&#xE9;menter le comportement suivant :<ul>
+<li><p>Impl&#xE9;menter le comportement suivant :</p>
+<ul>
 <li>A l&apos;initialisation de l&apos;application, la liste des collaborateurs est affich&#xE9;e.</li>
 <li>Le bouton sauvegarder permet d&apos;enregistrer les modifications.</li>
 <li>Si une erreur s&apos;est produite pendant la communication avec l&apos;API Backend, afficher un message d&apos;erreur.</li>
 <li>(Optionnel) Il est possible de filtrer la liste des collaborateurs par nom ou par d&#xE9;partement.</li>
 </ul>
+</li>
+<li><p>D&#xE9;ployer l&apos;application avec les <code>Github Pages</code>.</p>
+</li>
+<li><p>Mettre &#xE0; jour le lien dans la pull request.</p>
 </li>
 </ul>
 
@@ -504,7 +561,7 @@ npm -v
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"TP Web Api","level":"1.7.2","depth":2,"previous":{"title":"TP Démo Spring Boot","level":"1.7.1","depth":2,"path":"99-tp/01-tp-exemple.md","ref":"99-tp/01-tp-exemple.md","articles":[]},"dir":"ltr"},"config":{"plugins":["auto-summary","github-edit","theme-dev-institut"],"ignores":["_book","node_modules","sources"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"auto-summary":{},"search":{},"theme-dev-institut":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"github-edit":{"repo":"DevInstitut/formation-spring-boot-1","branch":"master"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"insert-logo":{"url":"http://www.dev-institut.fr/img/logo.svg","style":"width: 50px"}},"theme":"default","author":"Rossi Oddet","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Formation Spring Boot","gitbook":"*"},"file":{"path":"99-tp/02-tp-consolidation.md","mtime":"2018-05-31T06:39:24.150Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-31T06:41:53.578Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"TP Web Api","level":"1.7.2","depth":2,"previous":{"title":"TP Démo Spring Boot","level":"1.7.1","depth":2,"path":"99-tp/01-tp-exemple.md","ref":"99-tp/01-tp-exemple.md","articles":[]},"dir":"ltr"},"config":{"plugins":["auto-summary","github-edit","theme-dev-institut"],"ignores":["_book","node_modules","sources"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"auto-summary":{},"search":{},"theme-dev-institut":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"github-edit":{"repo":"DevInstitut/formation-spring-boot-1","branch":"master"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"insert-logo":{"url":"http://www.dev-institut.fr/img/logo.svg","style":"width: 50px"}},"theme":"default","author":"Rossi Oddet","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Formation Spring Boot","gitbook":"*"},"file":{"path":"99-tp/02-tp-consolidation.md","mtime":"2018-05-31T07:08:06.104Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-31T07:10:32.030Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
