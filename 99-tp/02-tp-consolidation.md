@@ -72,6 +72,7 @@ spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults = false
 spring.jpa.database-platform=org.hibernate.dialect.PostgreSQL9Dialect
 ```
 
+Si vous souhaitez initialiser les données via un script SQL, vous pouvez créer un 
 
 * Déployer la branche de production.
 

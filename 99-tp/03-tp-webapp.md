@@ -25,7 +25,7 @@ npm -v
 npm i -g live-server
 ```
 
-* Démarrer un serveur web. Pour cela, se rendre dans le répertoire _sirh-saisie-coordonnees-bancaires_ et lancer la commande :
+* Démarrer un serveur web. Pour cela, se rendre dans le répertoire _scb-web_ et lancer la commande :
 
 ```
 live-server
@@ -42,7 +42,7 @@ live-server --port=NUMERO_PORT
 * Créer une application indépendante (HTML / JS) et Bootstrap (maquette ci-dessous).
 
 ```
-/sirh-saisie-coordonnees-bancaires
+/scb-web
     index.html
     app.js
     /bootstrap
